@@ -13,10 +13,10 @@ export default (appInfo: MidwayAppInfo) => {
       dataSource: {
         default: {
           type: 'mysql',
-          host: '127.0.0.1',
-          port: 3306,
+          host: 'cc-mysql',
+          port: 33060,
           username: 'root',
-          password: 'root',
+          password: '123456',
           database: 'db1',
           synchronize: true, // 如果第一次使用，不存在表，有同步的需求可以写 true，注意会丢数据
           logging: false,
@@ -74,7 +74,7 @@ export default (appInfo: MidwayAppInfo) => {
       }
     },
     socketIO: {
-      transports: ['websocket'],
+      transports: ['websocket']
       // cors: {
       //   origin: '*'
       // }
